@@ -1,0 +1,25 @@
+.hardware{
+  padding-left: 16px;
+  &__title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+		text-transform: uppercase;
+		font-size: 16px;
+    font-weight: lighter;
+		line-height: 24px;
+		color: $text-light;
+    border-top: $border solid 1px;
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 160px;
+    padding: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+  }
+  }
+
+}

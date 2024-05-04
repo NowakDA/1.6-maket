@@ -1,0 +1,113 @@
+.brands-header {
+	background: $gradient;
+	min-height: 56px;
+	max-height: 80px;
+	&__title {
+		padding: 16px 24px;
+		text-transform: uppercase;
+		font-size: 16px;
+    font-weight: 400;
+		line-height: 24px;
+		color: $text-light;
+    border-top: $border solid 1px;
+	}
+
+}
+
+.brands-list{
+ margin:  0 auto;
+}
+.brands-list__item {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 240px;
+	height: 72px;
+	padding: 16px;
+	border: 1px solid #EAEAEA;
+	border-radius: 5px;
+}
+.brands-list__show-more {
+	visibility: hidden;
+}
+
+.swiper-wrapper {
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
+.swiper-pagination {
+  position: relative;
+  padding-top:24px; 
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background-color: #DDDDDD;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #B5B6BC;
+}
+
+@media (min-width: 768px) {
+  .brands-list__item {
+    max-width: 224px;
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .brands-list__wrapper {
+    box-sizing: border-box;
+    padding: 24px;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 24px;
+    grid-auto-flow: dense;
+  }
+  .brands-list__show-more {
+    visibility: inherit;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    &>span {
+      padding-left: 4px;
+    }
+    &::before {
+      content: url(../img/expand.png);
+      box-sizing: border-box;
+      height: 24px;
+    }
+    &--rotate::before {
+      transform: rotate(180deg);
+    }
+  }
+  .swiper-pagination {
+    display: none;
+}
+}
+
+@media (min-width: 1120px) {
+  .brands-list__wrapper {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .desktop {
+      display: flex !important;
+  }
+
+  .brands-list__item {
+      max-width: 240px;
+  }
+}
